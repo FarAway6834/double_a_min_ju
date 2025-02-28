@@ -1,2 +1,6 @@
 #!/bin/sh
 alias shgen='echo "#!/bin/sh" > '
+shgen $1/
+shgen $1/
+shgen $1/
+shgen $1/
