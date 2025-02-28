@@ -1,1 +1,1 @@
-__all__,__version__=["mc", "__main__"],"0.0.1"
+__all__,__version__=["mc", "__main__", "double_a_check", "displaylib"],"0.0.1"
