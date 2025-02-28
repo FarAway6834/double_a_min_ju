@@ -1,10 +1,9 @@
+from toml import load as double_a_settings
 from csv import reader as _r
 
 def minjuminc(f):
-    with open(f) as fp:
-        i = _r(fp)
-        minjuminc.__double_a_shell__ = i.__next__()
-        minjuminc.__safer__ = i.__next__()
-        yield from i
-
-__core__ = lambda f : f"{minjuminc.__double_a_shell__} | grep ({'|'.join(minjuminc(f))}) | {minjuminc.__safe__}"
+    with open(f) as fp: v = double_a_settings(fp)
+    v['double a shell']
+    with open(v['double a safe']) as fp:
+        fp = _r(fp)
+        zip(fp, fp.__next__())
