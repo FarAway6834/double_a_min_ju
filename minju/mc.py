@@ -1,15 +1,12 @@
+#!/usr/bin/python3 python
 from csv import reader as _r
-
-def jamiham(x):
-    yield from x
-
-def lets_shutdown():
-    return
+from sys import argv as _a
 
 def minjuminc(f):
-    with open(f) as fp: v = double_a_settings(fp)
-    with open(v['double a safe']) as fp:
-        fp = _r(fp)
-        blacklist = jamiham(fp)
-        yield lets_shutdown(zip(blacklist, jamiham))
-    yield f"python -m minju | grep ({'|'.join(blacklist)}) | sed -f double_a_safe | python -m minju.shutdown"
+    with open(f) as f:
+        return f"({'|'.join(_r(f))})"
+
+def main():
+    minjuminc(_a[1])
+
+if __name__ == "__main__": main()
