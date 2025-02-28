@@ -1,0 +1,2 @@
+#!/bin/sh
+python -m minju.double_a_check | sh
