@@ -1,6 +1,22 @@
-#!/bin/sh
+#!/bin/bash
+
 alias shgen='echo "#!/bin/sh" > '
-shgen $1/
-shgen $1/
-shgen $1/
-shgen $1/
+function gensh {
+    local i = 0
+    local v = 0
+    for j in $@
+    do
+        i=i+1
+        if ["$i" -eq 1]; then
+            v = j
+        else
+            shgen j
+            echo v >> j
+        fi
+    done
+}
+
+gensh 'bash | double_a_check' /bin/double_a_it
+gensg 'python -m minju $1' /bin/double_a_min_ju
+gensh 'echo $1 | grep -f /double_a_min_ju/blacklist.mcv | poweroff' /bin/double_a_safer
+gensh 'echo $1 | python -m minju.double_a_check | sh' /bin/double_a_check
