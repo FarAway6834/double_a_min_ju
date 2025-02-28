@@ -1,9 +1,15 @@
-from toml import load as double_a_settings
 from csv import reader as _r
+
+def jamiham(x):
+    yield from x
+
+def lets_shutdown():
+    return
 
 def minjuminc(f):
     with open(f) as fp: v = double_a_settings(fp)
-    v['double a shell']
     with open(v['double a safe']) as fp:
         fp = _r(fp)
-        zip(fp, fp.__next__())
+        blacklist = jamiham(fp)
+        yield lets_shutdown(zip(blacklist, jamiham))
+    yield f"python -m minju | grep ({'|'.join(blacklist)}) | sed -f double_a_safe | python -m minju.shutdown"
