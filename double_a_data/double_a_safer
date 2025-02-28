@@ -1,2 +1,2 @@
 #!/bin/sh
-grep -f /double_a_min_ju/blacklist.mcv | poweroff
+echo $1 | grep -f /double_a_min_ju/blacklist.mcv | poweroff
